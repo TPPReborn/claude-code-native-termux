@@ -44,12 +44,36 @@ Patch ini menghindari semua itu dengan:
 
 ## Quick start
 
+### Install langsung dari repo GitHub
+
+Jalankan di Termux:
+
 ```sh
-git clone <repo-ini>
-cd <repo-ini>
+pkg update
+pkg install -y git nodejs-lts glibc glibc-runner patchelf
+git clone https://github.com/dbgid/claude-code-native-termux.git
+cd claude-code-native-termux
 chmod +x scripts/*.sh
 ./scripts/install-claude-code-termux.sh
 ./scripts/verify-claude-code-termux.sh
+```
+
+### One-liner install
+
+Jika dependency dasar sudah tersedia:
+
+```sh
+git clone https://github.com/dbgid/claude-code-native-termux.git && \
+cd claude-code-native-termux && \
+chmod +x scripts/*.sh && \
+./scripts/install-claude-code-termux.sh && \
+./scripts/verify-claude-code-termux.sh
+```
+
+### Install versi Claude tertentu
+
+```sh
+CLAUDE_VERSION=2.1.138 ./scripts/install-claude-code-termux.sh
 ```
 
 Jika shell Anda masih cache command lama:
@@ -251,7 +275,7 @@ git init
 git add README.md scripts templates docs .github .gitignore LICENSE
 git commit -m "Add Termux Claude Code native patch kit"
 git branch -M main
-git remote add origin https://github.com/<user>/<repo>.git
+git remote add origin https://github.com/dbgid/claude-code-native-termux.git
 git push -u origin main
 ```
 
