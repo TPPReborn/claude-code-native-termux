@@ -266,28 +266,6 @@ bukan:
 
 Itu biasanya karena `LD_LIBRARY_PATH` glibc diwariskan. Wrapper final di repo ini tidak mengekspor `LD_LIBRARY_PATH`, hanya memakai loader-local `--library-path`.
 
-## Push ke GitHub
-
-Repo ini sudah berisi bahan siap push. Contoh dari folder ini:
-
-```sh
-git init
-git add README.md scripts templates docs .github .gitignore LICENSE
-git commit -m "Add Termux Claude Code native patch kit"
-git branch -M main
-git remote add origin https://github.com/dbgid/claude-code-native-termux.git
-git push -u origin main
-```
-
-Jika folder ini sudah menjadi repo git, cukup jalankan:
-
-```sh
-git status
-git add README.md scripts templates docs .github .gitignore LICENSE
-git commit -m "Add Termux Claude Code native patch kit"
-git push
-```
-
 ## Catatan keamanan
 
 - Repo ini tidak menyertakan binary Claude Code.
