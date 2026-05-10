@@ -1,0 +1,7 @@
+# Local Claude/auth data must never be committed
+.claude/
+*.bak
+*.before-termux-patch.*
+node_modules/
+npm-debug.log*
+.DS_Store
